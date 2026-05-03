@@ -1,0 +1,34 @@
+import Navbar from "@/components/Navbar";
+
+export const metadata = {
+  title: "Building Scalable Multi-tenant SaaS",
+}
+
+<Navbar />
+
+<div className="container" style={{ paddingTop: '10rem', paddingBottom: '5rem', maxWidth: '800px' }}>
+  <span style={{ color: 'hsl(var(--primary))', fontWeight: 600 }}>May 3, 2024</span>
+  <h1 style={{ fontSize: '3rem', margin: '1rem 0 2rem' }}>Building Scalable Multi-tenant SaaS</h1>
+  
+  <div className="glass" style={{ padding: '2.5rem', lineHeight: '1.8' }}>
+    Multi-tenancy is a critical architecture for SaaS products. In this post, we'll explore how to build a scalable multi-tenant system using .NET and PostgreSQL.
+    
+    ## Key Considerations
+    
+    1. **Data Isolation**: How to ensure one tenant cannot access another's data.
+    2. **Scalability**: Handling thousands of tenants without performance degradation.
+    3. **Customization**: Allowing tenants to customize their experience.
+    
+    ```csharp
+    public class TenantProvider : ITenantProvider 
+    {
+        public string GetTenantId() 
+        {
+            // Logic to extract tenant from request
+        }
+    }
+    ```
+    
+    Stay tuned for more deep dives into system architecture!
+  </div>
+</div>

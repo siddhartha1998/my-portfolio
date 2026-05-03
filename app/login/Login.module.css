@@ -1,0 +1,106 @@
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: hsl(var(--background));
+}
+
+/* Dot Grid Background */
+.loginPage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(hsla(0, 0%, 100%, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 0;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 3rem;
+  z-index: 1;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: var(--font-outfit);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+}
+
+.inputGroup input {
+  background: hsla(0, 0%, 100%, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #3b82f6; /* Vibrant blue */
+  background: hsla(0, 0%, 100%, 0.1);
+}
+
+.submitBtn {
+  background: #3b82f6; /* Vibrant blue matching krixhna.com */
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.submitBtn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+.footer {
+  text-align: center;
+}
+
+.backLink {
+  font-size: 0.85rem;
+  color: hsl(var(--muted-foreground));
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: white;
+}
