@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Siddhiganesh Joshi | Software Engineer Portfolio
 
-## Getting Started
+A premium, high-performance portfolio and blog built with **Next.js 16**, **Prisma 7**, and **Supabase**. Featuring a "Sleek Dark Glassmorphism" aesthetic, an integrated Admin Portal, and a dynamic MDX-powered blog.
 
-First, run the development server:
+## 🚀 Features
+
+- **Premium Design**: Modern "Dark Glassmorphism" UI with smooth Framer Motion animations.
+- **Dynamic Skills Marquee**: Infinite scrolling tech stack display inspired by top engineer portfolios.
+- **Admin Portal**: Secure dashboard to manage blog posts, projects, and view visitor messages.
+- **Supabase Integration**: Cloud-hosted database and secure authentication.
+- **MDX Blog**: Lightning-fast technical articles with syntax highlighting.
+- **Responsive Layout**: Optimized for all devices from mobile to desktop.
+- **Docker Ready**: Multi-stage containerization for seamless deployment.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Database**: Supabase (PostgreSQL)
+- **ORM**: Prisma 7
+- **Styling**: Vanilla CSS Modules (Glassmorphic Design System)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Auth**: Supabase SSR (Secure Admin Routes)
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- A Supabase Project
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/siddhartha1998/siddhiganesh-portfolio.git
+cd siddhiganesh-portfolio
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+# Supabase Keys
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+# Database Connections
+DATABASE_URL="postgresql://postgres:[PASSWORD]@db.[PROJECT-ID].supabase.co:6543/postgres?pgbouncer=true"
+DIRECT_URL="postgresql://postgres:[PASSWORD]@db.[PROJECT-ID].supabase.co:5432/postgres"
+```
+
+### 4. Setup the Database
+
+```bash
+npx prisma db push
+```
+
+### 5. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to see your portfolio!
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🐳 Docker Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build and run using Docker Compose:
 
-## Learn More
+```bash
+docker-compose up -d --build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 👤 Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Siddhiganesh Joshi**
+- LinkedIn: [siddhiganesh-joshi](https://www.linkedin.com/in/siddhiganesh-joshi/)
+- GitHub: [@siddhartha1998](https://github.com/siddhartha1998)
+- Email: er.siddhartha1998@gmail.com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Built with ❤️ and Next.js.

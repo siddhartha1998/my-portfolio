@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
 import Link from "next/link";
-import styles from "@/app/blog/Blog.module.css";
+import styles from "./Blog.module.css";
 
 interface Post {
   id: string;
@@ -22,17 +22,23 @@ export default function BlogSearch({ initialPosts }: { initialPosts: Post[] }) {
   );
 
   return (
-    <div className={styles.searchAndGrid}>
-      <div className={styles.searchWrapper}>
-        <div className={`${styles.searchBar} glass`}>
-          <Search size={20} className={styles.searchIcon} />
-          <input
-            type="text"
-            placeholder="Search posts or tags..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className={styles.searchInput}
-          />
+    <div className={styles.blogContentWrapper}>
+      <div className={styles.headerRow}>
+        <div className={styles.headerLeft}>
+          <h1 className={styles.title}>Blog</h1>
+          <p className={styles.subtitle}>Thoughts on system design, architecture, and leadership.</p>
+        </div>
+        <div className={styles.headerRight}>
+          <div className={`${styles.searchBar} glass`}>
+            <Search size={20} className={styles.searchIcon} />
+            <input
+              type="text"
+              placeholder="Search posts or tags..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className={styles.searchInput}
+            />
+          </div>
         </div>
       </div>
 

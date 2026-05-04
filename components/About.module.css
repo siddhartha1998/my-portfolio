@@ -1,0 +1,13 @@
+.about {
+  min-height: 80vh;
+}
+
+.content {
+  padding: 3rem;
+  line-height: 1.8;
+}
+
+.description {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}

@@ -25,15 +25,18 @@ export const metadata: Metadata = {
   }
 };
 
+import Footer from "@/components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning={true}>
       <body>
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
