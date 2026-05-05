@@ -3,9 +3,25 @@ import Link from "next/link";
 import { Plus, Edit, Trash2 } from "lucide-react";
 
 export default async function AdminProjects() {
-  const projects = await prisma.project.findMany({
-    orderBy: { order: 'asc' }
-  });
+  let projects = [];
+  try {
+    projects = await prisma.project.findMany({
+      orderBy: { order: 'asc' }
+    });
+  } catch (error: any) {
+    console.error("Prisma error in AdminProjects:", error);
+    return (
+      <div className="glass" style={{ padding: '3rem', textAlign: 'center', border: '1px solid hsl(var(--destructive))' }}>
+        <h2 style={{ color: 'hsl(var(--destructive))', marginBottom: '1rem' }}>Database Connection Error</h2>
+        <p style={{ color: 'hsl(var(--muted-foreground))' }}>
+          Could not reach the database. Please check your DATABASE_URL in .env and ensure your Supabase project is active.
+        </p>
+        <p style={{ fontSize: '0.8rem', marginTop: '1rem', opacity: 0.7 }}>
+          Error: {error.message || "Unknown error"}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div>

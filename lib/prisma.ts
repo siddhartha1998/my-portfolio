@@ -8,7 +8,12 @@ const prismaClientSingleton = () => {
     console.warn("DATABASE_URL is not set. Database features will be disabled.")
     return new PrismaClient()
   }
-  const pool = new pg.Pool({ connectionString })
+  const pool = new pg.Pool({ 
+    connectionString,
+    ssl: {
+      rejectUnauthorized: false
+    }
+  })
   const adapter = new PrismaPg(pool)
   return new PrismaClient({ adapter })
 }
