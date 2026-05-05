@@ -1,9 +1,10 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 import { Plus, Edit, Trash2 } from "lucide-react";
+import { Project } from "@prisma/client";
 
 export default async function AdminProjects() {
-  let projects = [];
+  let projects: Project[] = [];
   try {
     projects = await prisma.project.findMany({
       orderBy: { order: 'asc' }

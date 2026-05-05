@@ -1,9 +1,26 @@
 import prisma from "@/lib/prisma";
+import { Contact } from "@prisma/client";
 
 export default async function AdminMessages() {
-  const messages = await prisma.contact.findMany({
-    orderBy: { createdAt: 'desc' }
-  });
+  let messages: Contact[] = [];
+  try {
+    messages = await prisma.contact.findMany({
+      orderBy: { createdAt: 'desc' }
+    });
+  } catch (error: any) {
+    console.error("Prisma error in AdminMessages:", error);
+    return (
+      <div className="glass" style={{ padding: '3rem', textAlign: 'center', border: '1px solid hsl(var(--destructive))' }}>
+        <h2 style={{ color: 'hsl(var(--destructive))', marginBottom: '1rem' }}>Database Connection Error</h2>
+        <p style={{ color: 'hsl(var(--muted-foreground))' }}>
+          Could not reach the database. Please check your DATABASE_URL in .env and ensure your Supabase project is active.
+        </p>
+        <p style={{ fontSize: '0.8rem', marginTop: '1rem', opacity: 0.7 }}>
+          Error: {error.message || "Unknown error"}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div>

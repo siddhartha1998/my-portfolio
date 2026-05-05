@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import styles from "./Projects.module.css";
 import prisma from "@/lib/prisma";
+import { Project } from "@prisma/client";
 
 const GithubIcon = () => (
   <svg
@@ -20,7 +21,7 @@ const GithubIcon = () => (
 );
 
 const Projects = async () => {
-  let dbProjects: any[] = [];
+  let dbProjects: Project[] = [];
   try {
     dbProjects = await prisma.project.findMany({
       orderBy: { order: 'asc' }

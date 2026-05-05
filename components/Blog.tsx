@@ -1,9 +1,10 @@
 import BlogSearch from "./BlogSearch";
 import styles from "./Blog.module.css";
 import prisma from "@/lib/prisma";
+import { BlogPost } from "@prisma/client";
 
 const Blog = async () => {
-  let posts: any[] = [];
+  let posts: BlogPost[] = [];
   try {
     posts = await prisma.blogPost.findMany({
       where: { published: true },
