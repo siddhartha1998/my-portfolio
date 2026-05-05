@@ -27,7 +27,7 @@ export async function createBlogPost(formData: FormData) {
     });
   } catch (error) {
     console.error("Failed to create blog post:", error);
-    return { error: "Failed to create blog post" };
+    throw new Error("Failed to create blog post");
   }
 
   revalidatePath("/admin/blogs");

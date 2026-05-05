@@ -29,7 +29,7 @@ export async function createProject(formData: FormData) {
     });
   } catch (error) {
     console.error("Failed to create project:", error);
-    return { error: "Failed to create project" };
+    throw new Error("Failed to create project");
   }
 
   revalidatePath("/admin/projects");
