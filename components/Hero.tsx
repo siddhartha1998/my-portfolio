@@ -31,8 +31,8 @@ const Hero = () => {
             Software Engineer | Tech Lead
           </h2>
           <p className={styles.description}>
-            Specializing in .NET, Java, and Angular to build scalable, high-performance applications. 
-            I lead teams through robust architecture and clean code.
+            Specializing in .NET, Java, and Angular to build scalable and high-performance applications, with strong experience in the fintech domain.
+            Experienced in leading teams, designing robust software architecture, and delivering secure, reliable, and maintainable solutions with clean code practices.
           </p>
           
           <SkillsMarquee />
@@ -45,13 +45,13 @@ const Hero = () => {
         </div>
 
         <div className={styles.socials}>
-          <a href="https://github.com/siddhartha1998" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+          <a href="https://github.com/siddhartha1998" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="GitHub Profile">
             <GithubIcon size={20} />
           </a>
-          <a href="https://linkedin.com/in/siddhiganesh-joshi" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+          <a href="https://linkedin.com/in/siddhiganesh-joshi" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="LinkedIn Profile">
             <LinkedinIcon size={20} />
           </a>
-          <a href="/contact" className={styles.socialIcon}>
+          <a href="/contact" className={styles.socialIcon} aria-label="Contact via Email">
             <Mail size={20} />
           </a>
         </div>

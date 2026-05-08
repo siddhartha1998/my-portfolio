@@ -47,13 +47,13 @@
   font-weight: 700;
 }
 
-.dot {
+.underline {
   position: absolute;
-  bottom: 0.25rem;
-  width: 4px;
-  height: 4px;
+  bottom: 0;
+  width: 80%;
+  height: 2px;
   background: hsl(var(--primary));
-  border-radius: 50%;
+  border-radius: 2px;
   box-shadow: 0 0 8px hsl(var(--primary));
 }
 

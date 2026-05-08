@@ -35,7 +35,7 @@ const Navbar = () => {
             className={`${styles.link} ${pathname === link.href ? styles.active : ""}`}
           >
             {link.name}
-            {pathname === link.href && <span className={styles.dot} />}
+            {pathname === link.href && <span className={styles.underline} />}
           </Link>
         ))}
       </div>

@@ -136,10 +136,10 @@ const Contact = () => {
             </div>
 
             <div className={styles.socials}>
-              <a href="https://linkedin.com/in/siddhiganesh-joshi" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a href="https://linkedin.com/in/siddhiganesh-joshi" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="LinkedIn Profile">
                 <LinkedinIcon size={20} />
               </a>
-              <a href="https://github.com/siddhartha1998" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a href="https://github.com/siddhartha1998" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="GitHub Profile">
                 <GithubIcon size={20} />
               </a>
             </div>

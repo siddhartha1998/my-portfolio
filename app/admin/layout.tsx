@@ -1,5 +1,10 @@
+import { Metadata } from "next";
 import AdminSidebar from "@/components/AdminSidebar";
 import styles from "./AdminLayout.module.css";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default function AdminLayout({
   children,

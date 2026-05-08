@@ -20,15 +20,25 @@ const GithubIcon = () => (
   </svg>
 );
 
+import { unstable_cache } from "next/cache";
+
+const getCachedProjects = unstable_cache(
+  async () => {
+    try {
+      return await prisma.project.findMany({
+        orderBy: { order: 'asc' }
+      });
+    } catch (error) {
+      console.error("Database connection error:", error);
+      return [];
+    }
+  },
+  ['projects'],
+  { revalidate: 300, tags: ['projects'] }
+);
+
 const Projects = async () => {
-  let dbProjects: Project[] = [];
-  try {
-    dbProjects = await prisma.project.findMany({
-      orderBy: { order: 'asc' }
-    });
-  } catch (error) {
-    console.error("Database connection error:", error);
-  }
+  const dbProjects = await getCachedProjects();
 
   return (
     <section id="projects" className={styles.projects}>
@@ -51,8 +61,8 @@ const Projects = async () => {
                     ))}
                   </div>
                   <div className={styles.links}>
-                    {project.github && <a href={project.github} className={styles.linkIcon}><GithubIcon /></a>}
-                    {project.demo && <a href={project.demo} className={styles.linkIcon}><ExternalLink size={20} /></a>}
+                    {project.github && <a href={project.github} className={styles.linkIcon} aria-label="View Source on GitHub" target="_blank" rel="noopener noreferrer"><GithubIcon /></a>}
+                    {project.demo && <a href={project.demo} className={styles.linkIcon} aria-label="View Live Demo" target="_blank" rel="noopener noreferrer"><ExternalLink size={20} /></a>}
                   </div>
                 </div>
               </div>
