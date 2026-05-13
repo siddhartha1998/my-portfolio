@@ -81,7 +81,7 @@ const Contact = () => {
               
               <div className={styles.inputGroup}>
                 <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Regarding fintech based project" />
+                <input type="text" id="subject" name="subject" placeholder="Regarding .NET/Java based project" />
               </div>
 
               <div className={styles.inputGroup}>
@@ -109,8 +109,8 @@ const Contact = () => {
               Let's start the <span className={styles.gradientText}>Conversation.</span>
             </h2>
             <p className={styles.description}>
-              Whether you have a project in mind, a question, or just want to connect? I’d love to hear from you. 
-              I'm always open to new connections and interesting projects.
+              Whether you have a project in mind, a question to ask, or simply want to connect, I’d love to hear from you.
+              I’m always open to collaborating on exciting projects, exploring new ideas, and building meaningful connections. Let’s create something amazing together.
             </p>
             
             <div className={styles.contactList}>
@@ -120,7 +120,7 @@ const Contact = () => {
                 </div>
                 <div className={styles.itemText}>
                   <span>EMAIL ME</span>
-                  <p>er.siddhartha1998@gmail.com</p>
+                  <p>contact@siddhiganeshjoshi.com.np</p>
                 </div>
               </div>
 

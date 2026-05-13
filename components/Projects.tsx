@@ -47,7 +47,7 @@ const Projects = async () => {
         <div className={styles.grid}>
           {dbProjects.length === 0 ? (
             <p style={{ textAlign: 'center', gridColumn: '1 / -1', color: 'hsl(var(--muted-foreground))' }}>
-              No projects added yet. Add some in the Admin Portal!
+              No projects added yet!
             </p>
           ) : (
             dbProjects.map((project, index) => (
