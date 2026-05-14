@@ -15,13 +15,13 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Siddhiganesh Joshi | Software Engineer & Tech Lead",
   description: "Portfolio of Siddhiganesh Joshi, a Software Engineer and Tech Lead specializing in .NET, Java, and Angular. Building scalable, high-performance applications.",
-  keywords: ["Software Engineer", "Tech Lead", ".NET", "Java", "Angular", "Siddhiganesh Joshi", "Full Stack Developer"],
+  keywords: ["Software Engineer", "Tech Lead", ".NET", "Java", "Angular", "Siddhiganesh Joshi", "Full Stack Developer", "Fintech", "Clean Architecture"],
   authors: [{ name: "Siddhiganesh Joshi" }],
   openGraph: {
     title: "Siddhiganesh Joshi | Software Engineer & Tech Lead",
     description: "Portfolio of Siddhiganesh Joshi, a Software Engineer and Tech Lead specializing in .NET, Java, and Angular.",
     type: "website",
-    url: "https://siddhiganesh.dev", // Update with actual domain if known
+    url: "https://siddhiganeshjoshi.com.np",
   }
 };
 
