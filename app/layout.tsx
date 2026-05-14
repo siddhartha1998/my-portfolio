@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 
+const baseUrl = process.env.DOMAIN_URL || 'https://www.siddhiganeshjoshi.com.np';
+
 const inter = Inter({ 
   subsets: ["latin"],
   variable: '--font-inter',
@@ -21,8 +23,11 @@ export const metadata: Metadata = {
     title: "Siddhiganesh Joshi | Software Engineer & Tech Lead",
     description: "Portfolio of Siddhiganesh Joshi, a Software Engineer and Tech Lead specializing in .NET, Java, and Angular.",
     type: "website",
-    url: "https://siddhiganeshjoshi.com.np",
-  }
+    url: baseUrl,
+  },
+ alternates: {
+    canonical: baseUrl,
+  },
 };
 
 import Footer from "@/components/Footer";

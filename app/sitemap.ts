@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://siddhiganeshjoshi.com.np';
+  const baseUrl = process.env.DOMAIN_URL || 'https://www.siddhiganeshjoshi.com.np';
 
   return [
     {
